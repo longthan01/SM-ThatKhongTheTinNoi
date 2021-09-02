@@ -3,13 +3,15 @@ Import-Module WebAdministration
 . .\Utilities.ps1
 
 # Configuration example
-# $SubscriptionProvisioning = [PSCustomObject]@{
-#     HostRecord  = @{Ip = "127.0.0.1"; Address = "subscription-provisioning.local.core.ansarada.com" };
-#     AppPoolName = "web_subscription-provisioning.local.core.ansarada.com";
-#     ProjectPath = "C:\Git\subscription-provisioning-mock\ServiceHost";
-#     SitePath    = "C:\inetpub\wwwroot\subscription-provisioning-mock";
-#     IISSiteName = "web_subscription-provisioning.local.core.ansarada.com";
-#     PortBinding = 443;
+# $ServiceApi2 = [PSCustomObject]@{
+#     HostRecord            = @{Ip = "127.0.0.1"; Address = "servicesapi2-services.local.dataroom.ansarada.com" };
+#     ProjectPath           = "C:\git\microservices.dataroom.servicesapi2\Src\Ansarada.DataRoom.ServicesApi2";
+#     SitePath              = "C:\inetpub\wwwroot\servicesapi2";
+#     AppPoolName           = "servicesapi2.ansarada.prod";
+#     IISSiteName           = "servicesapi2.ansarada.prod";
+#     RebindAppPoolIdentity = $false;
+#     PortBinding           = 443;
+#     CertCN                = ".ansarada.com";
 # }
 
 function Set-AppPoolIdentity($config) {
